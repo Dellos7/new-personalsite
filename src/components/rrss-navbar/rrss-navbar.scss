@@ -1,0 +1,52 @@
+.rrss-navbar {
+    height: 10vh;
+    width: 100%;
+    position: relative;
+
+    &-list {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate( -50%, -50% );
+        &-elem {
+            display: inline-block;
+            font-size: 4rem;
+            padding: .5rem;
+            color: white;
+            transition: all .5s;
+
+            & a {
+                color: inherit;
+                &:visited {
+                    color: inherit;
+                }
+            }
+            
+            &:hover {
+                font-size: 5rem;
+            }
+
+            &__twitter {
+                &:hover {
+                    color: rgb(41, 163, 239	);
+                }
+            }
+            &__github {
+                &:hover {
+                    color: gold;
+                }
+            }
+            &__codepen {
+                &:hover {
+                    color: rgb(78, 205, 119	);
+                }
+            }
+            &__linkedin {
+                &:hover {
+                    color: rgb(16, 116, 175	);
+                }
+            }
+        }
+    }
+}
