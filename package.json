@@ -13,8 +13,11 @@
     "@stencil/core": "one",
     "@stencil/router": "one",
     "@stencil/sass": "^0.2.3",
-    "dlc-css-terminal": "0.0.2",
+    "dlc-css-terminal": "0.0.4",
     "ionicons": "^4.5.8"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "workbox-build": "4.3.1"
+  }
 }

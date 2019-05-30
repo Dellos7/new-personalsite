@@ -70,8 +70,6 @@ declare global {
     'dlc-terminal': HTMLDlcTerminalElement;
     'rrss-navbar': HTMLRrssNavbarElement;
   }
-
-  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
 
 declare namespace LocalJSX {
