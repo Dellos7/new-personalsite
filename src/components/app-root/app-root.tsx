@@ -15,7 +15,9 @@ export class AppRoot {
           <h1>Stencil App Starter</h1>
         </header>*/}
         <rrss-navbar githubUser="Dellos7" twitterUser="_dlopezcast" codepenUser="dellos7" linkedinUser="david-lopez-castellote"></rrss-navbar>
-
+        <profile-image></profile-image>
+        <user-name></user-name>
+        <menu-button></menu-button>
         <main>
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>

@@ -18,12 +18,15 @@ export namespace Components {
   }
   interface AppRoot {}
   interface DlcTerminal {}
+  interface MenuButton {}
+  interface ProfileImage {}
   interface RrssNavbar {
     'codepenUser': string;
     'githubUser': string;
     'linkedinUser': string;
     'twitterUser': string;
   }
+  interface UserName {}
 }
 
 declare global {
@@ -58,17 +61,38 @@ declare global {
     new (): HTMLDlcTerminalElement;
   };
 
+  interface HTMLMenuButtonElement extends Components.MenuButton, HTMLStencilElement {}
+  var HTMLMenuButtonElement: {
+    prototype: HTMLMenuButtonElement;
+    new (): HTMLMenuButtonElement;
+  };
+
+  interface HTMLProfileImageElement extends Components.ProfileImage, HTMLStencilElement {}
+  var HTMLProfileImageElement: {
+    prototype: HTMLProfileImageElement;
+    new (): HTMLProfileImageElement;
+  };
+
   interface HTMLRrssNavbarElement extends Components.RrssNavbar, HTMLStencilElement {}
   var HTMLRrssNavbarElement: {
     prototype: HTMLRrssNavbarElement;
     new (): HTMLRrssNavbarElement;
+  };
+
+  interface HTMLUserNameElement extends Components.UserName, HTMLStencilElement {}
+  var HTMLUserNameElement: {
+    prototype: HTMLUserNameElement;
+    new (): HTMLUserNameElement;
   };
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
     'dlc-terminal': HTMLDlcTerminalElement;
+    'menu-button': HTMLMenuButtonElement;
+    'profile-image': HTMLProfileImageElement;
     'rrss-navbar': HTMLRrssNavbarElement;
+    'user-name': HTMLUserNameElement;
   }
 }
 
@@ -79,19 +103,25 @@ declare namespace LocalJSX {
   }
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
   interface DlcTerminal extends JSXBase.HTMLAttributes<HTMLDlcTerminalElement> {}
+  interface MenuButton extends JSXBase.HTMLAttributes<HTMLMenuButtonElement> {}
+  interface ProfileImage extends JSXBase.HTMLAttributes<HTMLProfileImageElement> {}
   interface RrssNavbar extends JSXBase.HTMLAttributes<HTMLRrssNavbarElement> {
     'codepenUser'?: string;
     'githubUser'?: string;
     'linkedinUser'?: string;
     'twitterUser'?: string;
   }
+  interface UserName extends JSXBase.HTMLAttributes<HTMLUserNameElement> {}
 
   interface IntrinsicElements {
     'app-home': AppHome;
     'app-profile': AppProfile;
     'app-root': AppRoot;
     'dlc-terminal': DlcTerminal;
+    'menu-button': MenuButton;
+    'profile-image': ProfileImage;
     'rrss-navbar': RrssNavbar;
+    'user-name': UserName;
   }
 }
 
