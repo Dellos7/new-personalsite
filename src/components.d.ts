@@ -12,6 +12,7 @@ import {
 
 
 export namespace Components {
+  interface AboutSection {}
   interface AppHome {}
   interface AppProfile {
     'match': MatchResults;
@@ -26,6 +27,7 @@ export namespace Components {
     'linkedinUser': string;
     'twitterUser': string;
   }
+  interface SectionTitle {}
   interface UserName {}
 }
 
@@ -36,6 +38,12 @@ declare global {
     export interface Element {}
   }
 
+
+  interface HTMLAboutSectionElement extends Components.AboutSection, HTMLStencilElement {}
+  var HTMLAboutSectionElement: {
+    prototype: HTMLAboutSectionElement;
+    new (): HTMLAboutSectionElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -79,12 +87,19 @@ declare global {
     new (): HTMLRrssNavbarElement;
   };
 
+  interface HTMLSectionTitleElement extends Components.SectionTitle, HTMLStencilElement {}
+  var HTMLSectionTitleElement: {
+    prototype: HTMLSectionTitleElement;
+    new (): HTMLSectionTitleElement;
+  };
+
   interface HTMLUserNameElement extends Components.UserName, HTMLStencilElement {}
   var HTMLUserNameElement: {
     prototype: HTMLUserNameElement;
     new (): HTMLUserNameElement;
   };
   interface HTMLElementTagNameMap {
+    'about-section': HTMLAboutSectionElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
@@ -92,11 +107,13 @@ declare global {
     'menu-button': HTMLMenuButtonElement;
     'profile-image': HTMLProfileImageElement;
     'rrss-navbar': HTMLRrssNavbarElement;
+    'section-title': HTMLSectionTitleElement;
     'user-name': HTMLUserNameElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface AboutSection extends JSXBase.HTMLAttributes<HTMLAboutSectionElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
     'match'?: MatchResults;
@@ -111,9 +128,11 @@ declare namespace LocalJSX {
     'linkedinUser'?: string;
     'twitterUser'?: string;
   }
+  interface SectionTitle extends JSXBase.HTMLAttributes<HTMLSectionTitleElement> {}
   interface UserName extends JSXBase.HTMLAttributes<HTMLUserNameElement> {}
 
   interface IntrinsicElements {
+    'about-section': AboutSection;
     'app-home': AppHome;
     'app-profile': AppProfile;
     'app-root': AppRoot;
@@ -121,6 +140,7 @@ declare namespace LocalJSX {
     'menu-button': MenuButton;
     'profile-image': ProfileImage;
     'rrss-navbar': RrssNavbar;
+    'section-title': SectionTitle;
     'user-name': UserName;
   }
 }

@@ -19,7 +19,7 @@ export class DlcTerminal {
                     David López Castellote
     </dlc-cssterminal-block>
                 <dlc-cssterminal-block command="whoami" delay={15}>
-                    Programmer, web & app developer, on my way to be soon an IT teacher in Spain 😎
+                    Programmer, web & app developer, on my way to become soon an IT teacher in Spain 😎
     </dlc-cssterminal-block> 
                 <dlc-cssterminal-block shell="~ david$" command="&nbsp;" delay={26}></dlc-cssterminal-block>
             </dlc-cssterminal>
