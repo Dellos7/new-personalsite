@@ -8,8 +8,7 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "deploy": "npm run build && git subtree push --prefix=www origin master",
-    "git-push-source": "git push origin source-code"
+    "build-site": "npm run build && cp -r www/* ../personal-website-deploy"
   },
   "dependencies": {
     "@stencil/core": "one",
